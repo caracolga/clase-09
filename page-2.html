@@ -52,14 +52,13 @@
             <p><a href="page-1.html">Vínculo a page-1.html</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum malesuada velit pharetra porttitor. Nulla accumsan turpis mollis urna posuere, nec varius justo rhoncus. Vestibulum condimentum sollicitudin tempor. Ut sapien lacus, euismod ut condimentum eget, hendrerit non ligula. Cras vitae justo commodo, consequat risus eget, egestas lorem. Quisque consequat sagittis odio eget gravida. Integer dignissim diam sit amet finibus ullamcorper. Nulla semper consequat eros vel accumsan.</p>
             <figure>
                 <canvas id="uci"></canvas>
-                <figcaption>Indica fuente(s) de los datos</figcaption>
+                <figcaption>Fuente: SERNAMEG</figcaption>
             </figure>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum malesuada velit pharetra porttitor. Nulla accumsan turpis mollis urna posuere, nec varius justo rhoncus. Vestibulum condimentum sollicitudin tempor. Ut sapien lacus, euismod ut condimentum eget, hendrerit non ligula. Cras vitae justo commodo, consequat risus eget, egestas lorem. Quisque consequat sagittis odio eget gravida. Integer dignissim diam sit amet finibus ullamcorper. Nulla semper consequat eros vel accumsan.</p>
         </section>
         <footer>
             <hr>
-            <p>Nombre Apellido
-                <time datetime="2020-05-06" class="derecha">Miércoles, 6 de mayo de 2020</time>
+            <p>Olga F. Vio  <time datetime="2020-05-06" class="derecha">Miércoles, 6 de mayo de 2020</time>
             </p>
         </footer>
     </div>
@@ -67,34 +66,26 @@
     <script>
         Chart.defaults.global.defaultFontFamily = "'Lucida Console', 'Monaco', 'monospace'";
         new Chart(document.getElementById('uci').getContext('2d'), {
-            type: 'bar',
+            type: 'line',
             data: {
-                labels: ["01/04", "02/04", "03/04", "04/04", "05/04", "06/04", "07/04", "08/04", "09/04", "10/04", "11/04", "12/04", "13/04", "14/04", "15/04", "16/04", "17/04", "18/04", "19/04", "20/04", "21/04", "22/04", "23/04", "24/04", "25/04", "26/04", "27/04", "28/04", "29/04", "30/04"],
+                labels: ["2013", "2014", "2015", "2016", "2017", "2018", "2019"],
                 datasets: [{
-                    label: 'CHILE',
-                    borderColor: '#cc2f59',
-                    backgroundColor: '#cc2f59',
+                    label: 'CONSUMADOS',
+                    borderColor: 'rgb(145, 20, 15)',
+                    backgrounColor: 'rgba(145, 20, 15, 0.1)',
                     borderWidth: 1,
                     pointRadius: 2,
                     lineTension: 0,
-                    data: [16, 18, 22, 27, 34, 37, 43, 48, 57, 65, 73, 80, 82, 92, 94, 105, 116, 126, 133, 139, 147, 160, 168, 174, 181, 189, 198, 207]
+                    data: [40, 40, 45, 34, 44, 42, 46]
                 }, {
-                    label: 'ARGENTINA',
-                    borderColor: '#2b89f5',
-                    backgroundColor: '#2b89f5',
+                    label: 'FRUSTRADOS',
+                    borderColor: 'rgb(95, 70, 145)',
+                    backgroundColor: 'rgba(95, 70, 145, 0.1)',
                     borderWidth: 1,
                     pointRadius: 2,
                     lineTension: 0,
-                    data: [28, 36, 39, 43, 44, 48, 56, 63, 72, 82, 83, 90, 97, 102, 111, 115, 123, 129, 132, 136, 147, 152, 165, 176, 185, 192, 197, 207]
-                }, {
-                    label: 'ECUADOR',
-                    borderColor: '#6d2b65', // noten que este color coincide con el de h1{…} en el CSS
-                    backgroundColor: '#6d2b65', // esto para darle consistencia a los colores en uso
-                    borderWidth: 1,
-                    pointRadius: 2,
-                    lineTension: 0,
-                    data: [93, 120, 145, 172, 180, 191, 191, 242, 272, 297, 315, 333, 355, 369, 388, 403, 421, 456, 474, 507, 520, 537, 560, 576, 576, 576, 663, 871]
-                }]
+                    data: [78, 103, 112, 129, 115, 121, 108]
+                },]
             },
             options: {
                 responsive: true,
